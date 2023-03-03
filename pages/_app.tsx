@@ -13,14 +13,21 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <div
       style={{
-        width: "1000px",
-        display: "flex",
-        flexDirection: "column",
+        width: "100%",
+        padding: "10%",
+        paddingTop: 0,
       }}
     >
-      <Top />
-      <Component {...pageProps} />
-      <Footer />
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
+        <Top />
+        <Component {...pageProps} />
+        <Footer />
+      </div>
     </div>
   );
 }
