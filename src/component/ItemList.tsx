@@ -37,7 +37,6 @@ export default function ItemList({ list }: listType) {
               </>
             );
           })}
-          ;
         </Grid.Row>
       </Grid>
     </>

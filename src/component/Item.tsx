@@ -1,8 +1,8 @@
 import { dataType, itemType } from "@/@types/type";
 import Image from "next/image";
 import React from "react";
-import { Button, Header } from "semantic-ui-react";
-import styles from './Item.module.css';
+import { Button, Header, Loader } from "semantic-ui-react";
+import styles from "./Item.module.css";
 
 export default function Item({ item }: itemType) {
   const {
@@ -25,7 +25,7 @@ export default function Item({ item }: itemType) {
           <strong className={styles.tit_item}>{name}</strong>
           <strong className={styles.num_price}>${price}</strong>
           <span className={styles.txt_info}>
-            {category ? `${category}/` : ""}
+            {category ? `${category}` : ""}
             {product_type}
           </span>
           <Button color="orange">구매하기</Button>
