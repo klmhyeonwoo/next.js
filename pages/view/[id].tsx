@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { Loader } from "semantic-ui-react";
 
-const Post = ({ item }: any) => {
+const Post = ({ item, name }: any) => {
   return (
     <>
       {item && (
@@ -15,6 +15,7 @@ const Post = ({ item }: any) => {
             <title> {item.name} </title>
             <meta name="description" content={item.description}></meta>
           </Head>
+          {name} 환경입니다.
           <Item item={item} />
         </>
       )}
@@ -33,6 +34,7 @@ export async function getServerSideProps(context: any) {
   return {
     props: {
       item: data,
+      name: process.env.name,
     },
   };
 }
